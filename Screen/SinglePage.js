@@ -1,9 +1,8 @@
 import React from "react";
 import { StyleSheet, Text, View } from "react-native";
-import Scroling from "./Scroling";
 import Video from "./Video";
 
-const SinglePage = ({ route, navigation }) => {
+const SinglePage = ({ route }) => {
   const { data} = route.params;
   return (
     <View style={styles.box}>

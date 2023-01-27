@@ -1088,7 +1088,6 @@ const Home = ({navigation}) => {
     },
   ];
   const [videoArray, setVideoArray] = useState( arr  || []);
-  console.log("Home Page");
   return (
     <View>
       {/* <Header /> */}
