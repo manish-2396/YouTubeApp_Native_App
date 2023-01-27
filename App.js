@@ -1,14 +1,18 @@
-import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View } from "react-native";
-import { ResizeMode } from "expo-av";
-import VideoPlayer from "expo-video-player";
-import Video from "./Componets/Video";
-import Home from "./Componets/Home";
+import { StyleSheet } from "react-native";
+import HomeScreen from "./Screen/Home";
+import { NavigationContainer } from "@react-navigation/native";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import SinglePage from "./Screen/SinglePage";
+
 export default function App() {
+  const Stack = createNativeStackNavigator();
   return (
-    <View style={styles.container}>
-      <Home />
-    </View>
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen name="Home" component={HomeScreen} />
+        <Stack.Screen name="Single" component={SinglePage} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
 
