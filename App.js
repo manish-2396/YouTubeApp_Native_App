@@ -25,3 +25,5 @@ const styles = StyleSheet.create({
     height: 100,
   },
 });
+
+//makak akp App :-   eas build -p android --profile preview
