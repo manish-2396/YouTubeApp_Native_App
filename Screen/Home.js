@@ -1090,7 +1090,6 @@ const Home = ({navigation}) => {
   const [videoArray, setVideoArray] = useState( arr  || []);
   return (
     <View>
-      {/* <Header /> */}
       <Input setVideoArray={setVideoArray} />
       <View style={styles.box}>
         <Scroling data={videoArray} navigation={navigation}/>

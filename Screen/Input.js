@@ -5,7 +5,7 @@ import { Button, Image, StyleSheet, Text, TextInput, View } from "react-native";
 const Input = ({ setVideoArray }) => {
   const [text, setText] = useState("");
   const handlePress = () => {
-    let api = "AIzaSyAdsofG3jqDEg3ty4CRsVRBNy9FD0c8KUY";
+    let api = "";
     fetch(
       `https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=30&q=${text}&key=${api}`
     )
