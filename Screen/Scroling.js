@@ -4,12 +4,9 @@ import {
   StyleSheet,
   ScrollView,
   Image,
-  Button,
 } from "react-native";
-import Video from "./Video";
 
 const Scroling = ({ data, navigation }) => {
-  // console.log(data[1]?.snippet.thumbnails.high.url, navigation);
   const handlePress = (e) => {
     navigation.navigate("Single" , {data : e });
   };

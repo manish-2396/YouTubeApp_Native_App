@@ -5,7 +5,6 @@ import Video from "./Video";
 
 const SinglePage = ({ route, navigation }) => {
   const { data} = route.params;
-  console.log(data)
   return (
     <View style={styles.box}>
        <Video myvideo={data.id.videoId} />

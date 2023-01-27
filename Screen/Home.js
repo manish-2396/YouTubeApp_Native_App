@@ -1,9 +1,7 @@
 import React, { useState } from "react";
 import { StyleSheet, View } from "react-native";
-import Header from "./Header";
 import Input from "./Input";
 import Scroling from "./Scroling";
-import SinglePage from "./SinglePage";
 
 const Home = ({navigation}) => {
   let arr = [
