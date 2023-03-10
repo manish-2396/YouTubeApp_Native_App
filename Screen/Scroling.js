@@ -1,14 +1,8 @@
-import {
-  View,
-  Text,
-  StyleSheet,
-  ScrollView,
-  Image,
-} from "react-native";
+import { View, Text, StyleSheet, ScrollView, Image } from "react-native";
 
 const Scroling = ({ data, navigation }) => {
   const handlePress = (e) => {
-    navigation.navigate("Single" , {data : e });
+    navigation.navigate("Single", { data: e });
   };
   return (
     <View>
@@ -16,16 +10,15 @@ const Scroling = ({ data, navigation }) => {
         {data &&
           data.map((e, i) => {
             return (
-              <View key={i} style={styles.box}>
+              <View key={i} style={styles.box} >
                 <View style={styles.container}>
                   <Image
                     style={styles.stretch}
                     source={{ uri: e?.snippet?.thumbnails.high.url }}
+                    onPress={() => handlePress(e)}
                   />
                 </View>
-                <Text onPress={() => handlePress(e)} style={styles.text}>
-                  {e.snippet.title}
-                </Text>
+                <Text onPress={() => handlePress(e)} style={styles.text}>{e.snippet.title}</Text>
               </View>
             );
           })}

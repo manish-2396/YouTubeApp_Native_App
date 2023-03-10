@@ -1,5 +1,7 @@
-import React, { useState } from "react";
+import { useNavigation } from "@react-navigation/native";
+import React, { useLayoutEffect, useState } from "react";
 import { StyleSheet, View } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
 import Input from "./Input";
 import Scroling from "./Scroling";
 
@@ -1087,14 +1089,25 @@ const Home = ({navigation}) => {
       },
     },
   ];
+
+  // const navigation = useNavigation();
+
+  useLayoutEffect(() => {
+    navigation.setOptions({
+      headerShown: false,
+    });
+  }, []);
+
+
+
   const [videoArray, setVideoArray] = useState( arr  || []);
   return (
-    <View>
+    <SafeAreaView>
       <Input setVideoArray={setVideoArray} />
       <View style={styles.box}>
         <Scroling data={videoArray} navigation={navigation}/>
       </View>
-    </View>
+    </SafeAreaView>
   );
 };
 
